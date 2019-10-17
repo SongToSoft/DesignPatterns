@@ -11,6 +11,7 @@ namespace DesignPatterns.BehaviorPatterns
         //Handler
         abstract class Delivery
         {
+            //Succesoor
             public Delivery Shiftworker { get; set; }
             public abstract void HandleRequest(int packageWeight);
         }
