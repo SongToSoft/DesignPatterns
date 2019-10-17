@@ -1,13 +1,9 @@
-﻿using DesignPatterns.BehaviorPatterns;
+﻿using System;
+using DesignPatterns.BehaviorPatterns;
 using DesignPatterns.GenerativePatterns;
 using DesignPatterns.StructuralPatterns;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
+//Источник всех материалов: https://metanit.com/sharp/patterns/1.1.php
 //SOLID
 
 //Single Responsibility Principle(Принцип единственной обязанности)

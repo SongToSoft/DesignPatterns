@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.StructuralPatterns
 {
@@ -78,6 +75,7 @@ namespace DesignPatterns.StructuralPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Composite------------");
             Directory documents = new Directory("Documents");
             Directory video = new Directory("Video");
             Directory images = new Directory("Images");

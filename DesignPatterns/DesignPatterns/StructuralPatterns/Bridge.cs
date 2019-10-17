@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.StructuralPatterns
 {
@@ -70,12 +66,12 @@ namespace DesignPatterns.StructuralPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Bridge------------");
             Men men = new Men(new Hunting());
             men.Do();
 
             men.FoodExtracting = new Fishsing();
-            men.Do();
-            
+            men.Do();          
         }
     }
 }

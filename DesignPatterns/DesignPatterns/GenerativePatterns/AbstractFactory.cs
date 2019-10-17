@@ -56,7 +56,7 @@ namespace DesignPatterns.GenerativePatterns
             public abstract Artifact CreateArtifact();
         }
 
-        class ZeusFactory : HeroFactory
+        class MagicHeroFactory : HeroFactory
         {
             public override Magic CreateMagic()
             {
@@ -69,7 +69,7 @@ namespace DesignPatterns.GenerativePatterns
             }
         }
 
-        class LinaFactory : HeroFactory
+        class AgilityHeroFactory : HeroFactory
         {
             public override Magic CreateMagic()
             {
@@ -106,12 +106,13 @@ namespace DesignPatterns.GenerativePatterns
 
         static public void Run()
         {
-            HeroFactory heroFactory = new ZeusFactory();
+            Console.WriteLine("------------AbstractFactory------------");
+            HeroFactory heroFactory = new MagicHeroFactory();
             Hero hero = new Hero(heroFactory);
             hero.Cast();
             hero.Use();
 
-            heroFactory = new LinaFactory();
+            heroFactory = new AgilityHeroFactory();
             hero = new Hero(heroFactory);
             hero.Cast();
             hero.Use();

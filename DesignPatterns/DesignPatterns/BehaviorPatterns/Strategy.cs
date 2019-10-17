@@ -46,6 +46,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Strategy------------");
             Person person = new Person(new Car());
             person.Move();
 

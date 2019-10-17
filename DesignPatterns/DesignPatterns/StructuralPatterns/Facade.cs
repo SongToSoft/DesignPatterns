@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.StructuralPatterns
 {
@@ -60,8 +56,10 @@ namespace DesignPatterns.StructuralPatterns
                 Console.WriteLine("Tcp ping: " + ip);
             }
         }
+
         static public void Run()
         {
+            Console.WriteLine("------------Facade------------");
             ActionFacade actionFacade = new ActionFacade(new HttpRequests(), new TftpRequests(), new TcpRequests());
             actionFacade.HttpRequests.Get("SomeUrl");
             actionFacade.TftpRequests.StartServer();

@@ -1,51 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.StructuralPatterns
 {
     static class Flyweight
     {
-        abstract class Unit
+        abstract class House
         {
-            protected int helth; // количество этажей
+            protected int floorsNumber; // количество этажей
 
-            public abstract void Attack();
+            public abstract void Build();
         }
 
-        class Warrior : Unit
-        {
-            public override void Attack()
+        class WoodHouse : House
+        {            
+            public override void Build()
             {
-                Console.WriteLine("Warrior attack");
+                floorsNumber = 3;
+                Console.WriteLine("Wood House was builded");
             }
         }
 
-        class Archer : Unit
+        class BrickHouse : House
         {
-            public override void Attack()
+            public override void Build()
             {
-                Console.WriteLine("Archer attack");
+                Console.WriteLine("Brick House was builded");
             }
         }
 
-        class UnitFactory
+        class HouseFactory
         {
-            private Dictionary<string, Unit> units = new Dictionary<string, Unit>();
+            private Dictionary<string, House> houses = new Dictionary<string, House>();
 
-            public UnitFactory()
+            public HouseFactory()
             {
-                units.Add("Warrior", new Warrior());
-                units.Add("Archer", new Archer());
+                houses.Add("Wood", new WoodHouse());
+                houses.Add("Brick", new BrickHouse());
             }
 
-            public Unit GetUnit(string unitName)
+            public House GetUnit(string unitName)
             {
-                if (units.ContainsKey(unitName))
+                if (houses.ContainsKey(unitName))
                 {
-                    return units[unitName];
+                    return houses[unitName];
                 }
                 else
                 {
@@ -56,14 +54,15 @@ namespace DesignPatterns.StructuralPatterns
 
         static public void Run()
         {
-            UnitFactory unitFactory = new UnitFactory();
-            List<Unit> army = new List<Unit>();
-            army.Add(unitFactory.GetUnit("Warroir"));
-            army.Add(unitFactory.GetUnit("Archer"));
-            army.Add(unitFactory.GetUnit("Warroir"));
-            army.Add(unitFactory.GetUnit("Archer"));
-            army.Add(unitFactory.GetUnit("Warroir"));
-            Console.WriteLine(army.Count);
+            Console.WriteLine("------------Flyweight------------");
+            HouseFactory houseFactory = new HouseFactory();
+            List<House> streat = new List<House>();
+            streat.Add(houseFactory.GetUnit("Wood"));
+            streat.Add(houseFactory.GetUnit("Brick"));
+            streat.Add(houseFactory.GetUnit("Wood"));
+            streat.Add(houseFactory.GetUnit("Brick"));
+            streat.Add(houseFactory.GetUnit("Wood"));
+            Console.WriteLine(streat.Count);
         }
     }
 }

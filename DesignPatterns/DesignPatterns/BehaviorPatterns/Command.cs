@@ -72,6 +72,7 @@ namespace DesignPatterns.BehaviorPatterns
   
         static public void Run()
         {
+            Console.WriteLine("------------Command------------");
             UIButton invoker = new UIButton();
             Panel receiver = new Panel();
             CertainCommand command = new CertainCommand(receiver);

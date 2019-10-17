@@ -47,6 +47,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------TemplateMethod------------");
             Car car = new Car();
             car.Cycle();
 

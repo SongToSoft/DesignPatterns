@@ -93,14 +93,13 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Visitor------------");
             Club club = new Club();
             club.Add(new Footballer { Salary = 100 });
             club.Add(new Footballer { Salary = 200 });
             club.Add(new Manager { Salary = 10 });
             club.Accept(new SendOnVacation());
             club.Accept(new RaiseSalary());
-
-            Console.Read();
         }
     }
 }

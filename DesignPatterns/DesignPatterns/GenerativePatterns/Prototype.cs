@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.GenerativePatterns
 {
@@ -53,6 +49,7 @@ namespace DesignPatterns.GenerativePatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Prototype------------");
             Unit unit;
             Warrior warrior = new Warrior(-10, 15);
             unit = warrior.Clone();

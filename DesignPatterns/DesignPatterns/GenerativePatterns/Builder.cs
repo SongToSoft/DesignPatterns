@@ -85,6 +85,7 @@ namespace DesignPatterns.GenerativePatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Builder------------");
             LevelBuilder levelBuilder = new SimpleLevelBuilder();
             levelBuilder.Create();
 

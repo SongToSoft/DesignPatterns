@@ -87,6 +87,7 @@ namespace DesignPatterns.BehaviorPatterns
  
         static public void Run()
         {
+            Console.WriteLine("------------Observer------------");
             Club mu = new Club("Manchester United", 150);
             Club cl = new Club("Chelsea", 100);
             Club ju = new Club("Juventus", 70);

@@ -60,6 +60,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------ChainOfResponsibility------------");
             PostOffice postOffice = new PostOffice();
             int packageFirst = 5, packageSecond = 20;
 

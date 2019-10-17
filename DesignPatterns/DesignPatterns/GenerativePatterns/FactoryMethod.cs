@@ -52,6 +52,7 @@ namespace DesignPatterns.GenerativePatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------FactoryMethod------------");
             Smith smith = new ArmorSmith();
             Item item = smith.Create();
             item.Equip();

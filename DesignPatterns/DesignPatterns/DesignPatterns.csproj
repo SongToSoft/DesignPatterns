@@ -54,7 +54,7 @@
     <Compile Include="BehaviorPatterns\Strategy.cs" />
     <Compile Include="BehaviorPatterns\TemplateMethod.cs" />
     <Compile Include="BehaviorPatterns\Visitor.cs" />
-    <Compile Include="GenerativePatterns\Abstract Factory.cs" />
+    <Compile Include="GenerativePatterns\AbstractFactory.cs" />
     <Compile Include="GenerativePatterns\Builder.cs" />
     <Compile Include="GenerativePatterns\FactoryMethod.cs" />
     <Compile Include="GenerativePatterns\LazySingleton.cs" />

@@ -101,6 +101,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------State------------");
             Animator animator = new Animator();
             animator.Run();
             animator.Idle();

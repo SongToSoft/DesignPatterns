@@ -36,6 +36,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Interpreter------------");
             Context context = new Context();
 
             var expression = new NonterminalExpression();

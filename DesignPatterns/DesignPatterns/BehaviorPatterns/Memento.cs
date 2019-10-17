@@ -47,8 +47,10 @@ namespace DesignPatterns.BehaviorPatterns
                 Points = new Stack<RestorePoint>();
             }
         }
+
         static public void Run()
         {
+            Console.WriteLine("------------Memento------------");
             ComputerSystem computerSystem = new ComputerSystem("4.12");
             SystemHistory history = new SystemHistory();
 

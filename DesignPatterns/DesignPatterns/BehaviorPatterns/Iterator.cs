@@ -55,6 +55,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Iterator------------");
             Inventory inventory = new Inventory();
             inventory.items = new Item[]
             {

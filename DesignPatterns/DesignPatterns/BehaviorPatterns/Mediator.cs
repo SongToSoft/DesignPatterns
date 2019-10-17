@@ -75,6 +75,7 @@ namespace DesignPatterns.BehaviorPatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Mediator------------");
             ManagerMediator mediator = new ManagerMediator();
             NetworkMember client = new Client(mediator);
             NetworkMember server = new Server(mediator);

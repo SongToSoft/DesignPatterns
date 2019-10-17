@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.GenerativePatterns
 {
@@ -36,6 +32,7 @@ namespace DesignPatterns.GenerativePatterns
 
         static public void Run()
         {
+            Console.WriteLine("------------Singleton------------");
             //Two way for use Singleton
             //1
             WorldCreator worldCreator = WorldCreator.Instance("Mario World");
